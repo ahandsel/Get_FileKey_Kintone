@@ -1,5 +1,5 @@
 // Open_FileKey.js
-let Ask_Subdomain = window.prompt('Please input the FileKey:', 'cafe');
+let Ask_Subdomain = window.prompt('Please input the FileKey:', 'default');
 let Ask_FileKey = window.prompt('Please input the FileKey:');
 let url = `https://${Ask_Subdomain}.kintone.com/k/v1/file.json?fileKey=${Ask_FileKey}`;
 let backup = url;
@@ -23,7 +23,7 @@ xhr.onload = function() {
 };
 xhr.send();
 /*
- * blobUrl = https://cafe.kintone.com/5eac86b5-930d-467f-a004-9499f5dde01f
- * backup = https://cafe.kintone.com/k/v1/file.json?fileKey=20191126062435FA0C8F01642446578BDE6B87AE75A4B1189
+ * blobUrl = https://{subdomain}.kintone.com/5eac86b5-930d-467f-a004-9499f5dde01f
+ * backup = https://{subdomain}.kintone.com/k/v1/file.json?fileKey=20191126062435FA0C8F01642446578BDE6B87AE75A4B1189
  *
  */
